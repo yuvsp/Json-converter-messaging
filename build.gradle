@@ -1,0 +1,29 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.5'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example.yuvalshap'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.kafka:spring-kafka'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.kafka:spring-kafka-test'
+	// compile 'com.fasterxml.jackson.core:jackson-databind:2.12.3'
+	compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.10.1'
+	compile 'com.fasterxml.woodstox:woodstox-core:5.1.0'
+	compile 'org.springframework.kafka:spring-kafka:2.5.8.RELEASE'
+}
+
+test {
+	useJUnitPlatform()
+}
